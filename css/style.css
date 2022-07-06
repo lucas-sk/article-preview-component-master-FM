@@ -6,9 +6,6 @@
 
 }
 
-
-
-
 *{
   padding: 0;
   margin: 0;
@@ -30,6 +27,11 @@ main{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+button{
+  cursor: pointer;
+  border: none;
 }
 
 .container{
@@ -82,7 +84,6 @@ h1{
 
 .share-btn{
   margin-left: auto;
-  border: none;
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
