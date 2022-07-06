@@ -1,114 +1,187 @@
-/* img
-    285x
-
-  content 445
-
-  heigth: 280
-
-  button active share
-  width 247px;
-  height 55
-
-  mobile 
-  505 height
-  width : 328px
-
-  img mobile height 305
-
-  perfil
-  heigh 64
-
-  
- */
-
 :root{
 --very-dark-grayish-blue: hsl(217, 19%, 35%);
 --desaturated-dark-blue: hsl(214, 17%, 51%);
 --grayish-blue: hsl(212, 23%, 69%);
 --light-grayish-blue: hsl(210, 46%, 95%);
+
 }
 
+
+
+
 *{
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
 body{
-  background-color: var(--light-grayish-blue);
-  color: var(--grayish-blue);
-  font-family: 'Manrope', sans-serif;
   width: 100vw;
   height: 100vh;
+  background-color: var(--light-grayish-blue);
   font-size: 13px;
-  font-weight: 500;
+  font-family: 'Manrope', sans-serif;
+  color: var(--grayish-blue);
 }
 
-h2{
-  color: var(--very-dark-grayish-blue);
-  font-weight: 700;
-}
-
-.container{
+main{
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+}
+
+.container{
+  display: flex;
+  background-color: #fff;
+  width: clamp(20.5rem, 80%, 45.625rem); 
+  height: 17.5rem;
+  border-radius: 0.5rem;
+}
+
+.img-drawers{
+  border-radius: 0.5rem 0 0 0.5rem;
+  max-width: 100%;
+  height: auto;
+  width: 17.5rem;
 }
 
 .container > div{
-  max-width: 730px;
-  height: 280px;
-  border-radius: 20px;
-  background-color: white;
-  border: 0;
-  display: flex;
+  padding: 40px 40px 20px;
+}
+p{
+  margin: 1.25rem 0;
+  font-weight: 500;
 }
 
-.container-img{
-  width: 285px;
-  height: 100%;
-  border-radius: 20px 0 0 20px;
-  background-image: url(../images/drawers.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.container-content{
-  width: 445px;
-  display: flex;
-  flex-direction: column;
+h1{
+  font-size: 1.25rem;
+  color: var(--desaturated-dark-blue);
+  line-height: 1.5rem;
 }
 
 .perfil{
   display: flex;
-  width: 365px;
-  gap: 10px;
+  width: 100%;
+  gap: 0.5rem;
+}
+.perfil strong{
+  color: var(--desaturated-dark-blue);
+}
+.perfil p{
+  margin: 0;
 }
 
-.perfil > img{
-  width: 40px;
-  height: 40px;
+.avatar{
+  max-width: 100%;
+  width: 2.5rem;
+  height: auto;
   border-radius: 50%;
 }
 
-.perfil button{
+.share-btn{
   margin-left: auto;
-  border: 0;
+  border: none;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
-  background-color: var(--light-grayish-blue);
-  width: 32px;
-  height: 32px;
+  background-color: var(--light-grayish-blue)
 }
 
-.perfil button:active{
-  background-color: var(--desaturated-dark-blue); 
-  
+.share-btn:active,
+.share-btn-active{
+  background-color: var(--desaturated-dark-blue)
+}
+.share-btn:active img,
+.share-btn-active img{
+  filter: brightness(10);
 }
 
-.attribution{
+.social-media{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
-  left: 50%;
-  top: calc(100% - 30px);
+  width: 248px;
+  height: 54px;
+  background-color: var(--very-dark-grayish-blue);
+  transform: translate(13.75rem, -7rem);
+  gap: 1rem;
+  border-radius: 0.5rem;
+}
+.social-media p{
+  letter-spacing: 0.25rem;
+  margin: 0;
+}
+
+.social-media:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 10px;
+  border-style: solid;
+  border-color: var(--very-dark-grayish-blue) transparent transparent transparent;
+  transform: translate(10px, 36px);
+}
+
+.hidden{
+  display: none;
+}
+
+@media (max-width: 841px) {
+  .container > div {
+    padding: 20px ;
+  }
+}
+@media (max-width: 723px) {
+  .container{
+    flex-direction: column;
+    height: 31.875rem;
+  }
+  .img-drawers{
+    width: 100%;
+    border-radius: 0.5rem 0.5rem 0 0;
+    height: 12.5rem;
+  }
+  .container > div {
+    padding: 40px 40px 0px;
+  }
+  .social-media{
+    transform: translate(calc(80% - 4rem), -7rem)
+  }
+}
+
+@media (max-width: 500px){
+  p{
+    margin: 1rem 0;
+  }
+  .social-media{
+    position: relative;
+    transform: translate(0, 0);
+    width: calc(100% + 80px);
+    height: 62px;
+    margin-left: -40px;
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
+  .social-media:after{
+    border: none;
+  }
+  .share-btn-active{
+    margin-left: 4rem;
+  }
+}
+
+@media (max-width: 424px) {
+  .share-btn-active {
+      margin-left: 2rem;
+    }
+}
+
+/* control tooltip locale */
+@media (max-width:896px) {
+  .social-media{
+    transform: translate(calc(80% - 4rem), -7rem)
+  }
 }
