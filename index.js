@@ -5,6 +5,7 @@ const perfilBtn = document.querySelector('.perfil button');
 
 function showSocialMedia(){
   if (window.matchMedia("(min-width: 501px)").matches) {
+    
     if (socialMedia.classList.contains('hidden')){
       socialMedia.classList.remove('hidden');
       perfilBtn.classList.add('share-btn-active');
@@ -24,6 +25,7 @@ function showSocialMedia(){
     else{
       socialMedia.classList.add('hidden');
       perfil.classList.remove('hidden');
+      
     }
     
   }

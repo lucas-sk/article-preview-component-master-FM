@@ -131,6 +131,12 @@ h1{
 .hidden{
   display: none;
 }
+/* control tooltip locale */
+@media (max-width:896px) {
+  .social-media{
+    transform: translate(calc(80% - 4rem), -7rem)
+  }
+}
 
 @media (max-width: 841px) {
   .container > div {
@@ -155,13 +161,14 @@ h1{
   }
 }
 
+
 @media (max-width: 500px){
   p{
     margin: 1rem 0;
   }
   .social-media{
     position: relative;
-    transform: none;
+    transform: unset;
     width: calc(100% + 80px);
     height: 62px;
     margin-left: -40px;
@@ -179,11 +186,4 @@ h1{
   .share-btn-active {
       margin-left: 2rem;
     }
-}
-
-/* control tooltip locale */
-@media (min-width:896px) {
-  .social-media{
-    transform: translate(calc(80% - 4rem), -7rem)
-  }
 }
