@@ -67,6 +67,7 @@ h1{
   display: flex;
   width: 100%;
   gap: 0.5rem;
+  align-items: center;
 }
 .perfil strong{
   color: var(--desaturated-dark-blue);
@@ -160,7 +161,7 @@ h1{
   }
   .social-media{
     position: relative;
-    transform: translate(0, 0);
+    transform: none;
     width: calc(100% + 80px);
     height: 62px;
     margin-left: -40px;
@@ -181,7 +182,7 @@ h1{
 }
 
 /* control tooltip locale */
-@media (max-width:896px) {
+@media (min-width:896px) {
   .social-media{
     transform: translate(calc(80% - 4rem), -7rem)
   }
